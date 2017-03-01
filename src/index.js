@@ -8,10 +8,11 @@ export const enableRetyping = function (reducer: Function) {
   }
 }
 
-export const retypeAction = function (type: string, action: any) {
+export const retypeAction = function (type: any, action: any) {
   return {
     type,
     action,
     retype: true
   }
 }
+
