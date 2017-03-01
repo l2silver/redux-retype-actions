@@ -1,0 +1,25 @@
+{
+  "name": "redux-retype-actions",
+  "version": "1.0.0",
+  "description": "Change the type of your actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l2silver/redux-retype-actions.git"
+  },
+  "keywords": [
+    "redux",
+    "redux-batched-actions",
+    "retype",
+    "actions"
+  ],
+  "author": "Leigh Silverstein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/l2silver/redux-retype-actions/issues"
+  },
+  "homepage": "https://github.com/l2silver/redux-retype-actions#readme"
+}
