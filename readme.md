@@ -2,6 +2,7 @@ redux-retype-actions
 =====================
 
 Rename action types
+
 [![Build Status](https://travis-ci.org/l2silver/redux-retype-actions.svg?branch=master)](https://travis-ci.org/l2silver/redux-retype-actions)
 
 
@@ -30,7 +31,6 @@ function reducer(state, action) {
     default: return state
   }
 }
-
 
 const store = createStore(enableRetyping(enableBatching(reducer)), initialState)
 const doMultipleThings = retypeAction('DO_MULTIPLE_THINGS', batchActions([doThing(), doOther()]))
