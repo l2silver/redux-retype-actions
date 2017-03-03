@@ -1,8 +1,8 @@
 // @flow
 export const enableRetyping = function (reducer: Function) {
-  return (state: Object, action: Object) => {
+  return function retypedReducer(state: Object, action: Object){
     if (action.retype) {
-      return reducer(state, action.action)
+      return retypedReducer(state, action.action)
     }
     return reducer(state, action)
   }
