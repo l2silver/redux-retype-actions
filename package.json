@@ -1,6 +1,6 @@
 {
   "name": "redux-retype-actions",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Change the type of your actions",
   "main": "dist/index.js",
   "scripts": {
