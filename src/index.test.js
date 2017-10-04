@@ -6,7 +6,7 @@ describe('redux-retype-actions', function () {
       const reducer = function (state, action){
         switch(action.type){
           case 'MAYBE':
-            return 2
+            return action.payload
           case '1':
             return 1
           case '0':
@@ -27,7 +27,7 @@ describe('redux-retype-actions', function () {
       }
       const renameTrueAction = retypeAction('TRUE', trueAction)
       const renameFalseAction = retypeAction('FALSE', falseAction)
-      const renameMaybeAction = retypeAction('MAYBE', maybeAction)
+      const renameMaybeAction = retypeAction('MAYBE', maybeAction, 2)
       expect(enabledReducer({}, renameTrueAction)).toBe(1)
       expect(enabledReducer({}, renameTrueAction)).toBe(1)
       expect(enabledReducer({}, renameMaybeAction)).toBe(2)

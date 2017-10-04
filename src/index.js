@@ -5,7 +5,8 @@ export const enableRetyping = function (reducer: Function) {
       return retypedReducer(
         retypedReducer(state, {
           type: action.type,
-          payload: action.action,
+          payload: action.payload,
+          action: action.action,
         }),
         action.action
       )
@@ -14,10 +15,11 @@ export const enableRetyping = function (reducer: Function) {
   }
 }
 
-export const retypeAction = function (type: any, action: any) {
+export const retypeAction = function (type: any, action: { type: any }, payload?: any) {
   return {
     type,
     action,
+    payload,
     retype: true
   }
 }
