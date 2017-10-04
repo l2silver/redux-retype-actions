@@ -2,7 +2,13 @@
 export const enableRetyping = function (reducer: Function) {
   return function retypedReducer(state: Object, action: Object){
     if (action.retype) {
-      return retypedReducer(state, action.action)
+      return retypedReducer(
+        retypedReducer(state, {
+          type: action.type,
+          payload: action.action,
+        }),
+        action.action
+      )
     }
     return reducer(state, action)
   }
